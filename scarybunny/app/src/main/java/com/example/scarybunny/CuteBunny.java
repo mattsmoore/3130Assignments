@@ -1,8 +1,36 @@
 package com.example.scarybunny;
 
+
+import java.util.concurrent.ThreadLocalRandom;
+
 public class CuteBunny implements IState {
 
-    public void handle(){
-        git
+    private int id;
+
+    public int returnType(){
+        return 1;
     }
+
+    public int getResourceID(){
+        return this.id;
+    }
+
+    CuteBunny(){
+
+        int[] resourceIDs = {R.drawable.cutebunny1, R.drawable.cutebunny2, R.drawable.cutebunny3, R.drawable.cutebunny4};
+
+        int random = ThreadLocalRandom.current().nextInt(0,resourceIDs.length);
+
+        this.id = resourceIDs[random];
+
+    }
+
+    public void handle(){
+
+        ScaryBunnyGame.getInstance().currentState = new CuteBunny();
+        ScaryBunnyGame.getInstance().stateControl.makeCuteBunnyState();
+
+    }
+
+
 }
