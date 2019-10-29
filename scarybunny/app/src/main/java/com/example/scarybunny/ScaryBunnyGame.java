@@ -15,6 +15,8 @@ class ScaryBunnyGame {
         this.stateControl = new StateControl();
     }
 
+
+
     int nextImg(){
         if(currentState == null){
             this.currentState = stateControl.makeRandomState();

@@ -5,5 +5,6 @@ public interface IState {
     int returnType();
     int getResourceID();
     void handle();
+    int getAudioID();
 
 }
