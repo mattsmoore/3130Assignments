@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.media.audiofx.BassBoost;
+import android.media.audiofx.Equalizer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -40,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 int audioID = ScaryBunnyGame.getInstance().currentState.getAudioID();
                 if(audioID!=0) {
                     mediaPlayer = MediaPlayer.create(context,audioID);
-                    mediaPlayer.setVolume(50,50);
                     mediaPlayer.start();
                 }
                 if(ScaryBunnyGame.getInstance().currentState.returnType() == 0){

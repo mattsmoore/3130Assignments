@@ -1,8 +1,6 @@
 package com.example.scarybunny;
 
-
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class CuteBunny implements IState {
 
@@ -32,8 +30,7 @@ public class CuteBunny implements IState {
 
     public void handle(){
 
-        ScaryBunnyGame.getInstance().currentState = new CuteBunny();
-        ScaryBunnyGame.getInstance().stateControl.makeCuteBunnyState();
+        ScaryBunnyGame.getInstance().currentState = ScaryBunnyGame.getInstance().stateControl.makeRandomState();
 
     }
 

@@ -19,18 +19,12 @@ class ScaryBunnyGame {
 
     int nextImg(){
         if(currentState == null){
-            this.currentState = stateControl.makeRandomState();
+            this.currentState = stateControl.makeCuteBunnyState();
+        }
+        else {
+            this.currentState.handle();
         }
 
-        int id = currentState.returnType();
-
-        if(id == 1){
-            currentState = stateControl.makeRandomState();
-        }
-        else{
-            currentState = stateControl.makeCuteBunnyState();
-
-        }
         return currentState.getResourceID();
     }
 }

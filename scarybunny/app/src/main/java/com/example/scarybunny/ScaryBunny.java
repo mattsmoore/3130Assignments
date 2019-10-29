@@ -31,8 +31,7 @@ public class ScaryBunny implements IState {
     }
 
     public void handle(){
-        ScaryBunnyGame.getInstance().currentState = new ScaryBunny();
-        ScaryBunnyGame.getInstance().stateControl.makeScaryBunnyState();
+        ScaryBunnyGame.getInstance().currentState = ScaryBunnyGame.getInstance().stateControl.makeCuteBunnyState();
     }
 
 }
