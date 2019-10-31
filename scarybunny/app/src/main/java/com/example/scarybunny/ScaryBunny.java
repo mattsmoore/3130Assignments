@@ -1,9 +1,10 @@
 package com.example.scarybunny;
 
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
-public class ScaryBunny implements IState {
+
+import java.util.Random;
+
+public class ScaryBunny extends State {
 
     private int id;
     private int audioID;
@@ -20,6 +21,9 @@ public class ScaryBunny implements IState {
         return this.audioID;
     }
 
+    public void updateState(){
+
+    }
 
 
     ScaryBunny(){
@@ -32,6 +36,7 @@ public class ScaryBunny implements IState {
 
     public void handle(){
         ScaryBunnyGame.getInstance().currentState = ScaryBunnyGame.getInstance().stateControl.makeCuteBunnyState();
+
     }
 
 }

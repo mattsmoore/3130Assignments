@@ -2,7 +2,7 @@ package com.example.scarybunny;
 
 public interface IStateControl {
 
-    IState makeRandomState();
+    State makeRandomState();
     CuteBunny makeCuteBunnyState();
     ScaryBunny makeScaryBunnyState();
 

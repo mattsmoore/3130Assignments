@@ -3,7 +3,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class StateControl implements IStateControl {
 
-    public IState makeRandomState(){
+    public State makeRandomState(){
         double d = ThreadLocalRandom.current().nextDouble();
         double scaryOdds = 0.1;
         if(d < scaryOdds) return new ScaryBunny();
