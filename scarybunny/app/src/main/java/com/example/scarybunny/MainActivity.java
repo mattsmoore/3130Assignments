@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements IStateListener {
     public Context context = this;
     public ImageView imageView;
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements IStateListener {
 
         // Flashing lights in the game
         Toast toast = Toast.makeText(getApplicationContext(),
-                "*** EPILEPSY WARNING ***",
+                "*** EPILEPSY WARNING ***\nR.I.P HEADPHONE USERS",
                 Toast.LENGTH_LONG);
         toast.show();
 
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements IStateListener {
             }
         });
     }
+
 
     // method for updating the image displayed and the mediaplayer
 
