@@ -1,28 +1,26 @@
 public class Person
 {
 	public String name;
-	public String street;
-	public String city;
-	public String province;
-	public String postalCode;
+	public Address address;
 
 	public Person()
 	{
 		name = "Rob";
-		street = "Rob street";
-		city = "Rob city";
-		province = "Rob province";
-		postalCode = "Rob postalcode";
+		address = new Address();
+
 	}
 
 	public boolean isPersonRob()
 	{
-		return  this.name.equals("Rob") &&
-				this.street.equals("Rob street") &&
-				this.city.equals("Rob city") &&
-				this.province.equals("Rob province") &&
-				this.postalCode.equals("Rob postalcode");
+		return  this.name.equals("Rob") && isRobsAddress(this.address);
 	}
 
+	public boolean isRobsAddress(Address a){
+			return a.street.equals("Rob street") &&
+				a.city.equals("Rob city") &&
+				a.province.equals("Rob province") &&
+				a.postalCode.equals("Rob postalcode");
+	}
 
 }
+
